@@ -15,7 +15,7 @@ class Lottery extends Component {
 		this.state = {
 			numbers: Array.from({ length: this.props.numBalls })
 		};
-		this.generateNumbers = this.generateNumbers.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
 	generateNumbers() {
@@ -28,8 +28,13 @@ class Lottery extends Component {
 		if (winningNumbers.length === this.props.numBalls) {
 			this.setState({ numbers: winningNumbers });
 		} else {
+			// if array length is not equal props.numBalls call function again till U gonna get array with different random numbers
 			this.generateNumbers();
 		}
+	}
+
+	handleClick() {
+		this.generateNumbers();
 	}
 
 	render() {
@@ -41,7 +46,7 @@ class Lottery extends Component {
 						<LottoBall num={number} />
 					))}
 				</div>
-				<button className="Lottery-btn" onClick={this.generateNumbers}>
+				<button className="Lottery-btn" onClick={this.handleClick}>
 					Generate
 				</button>
 			</div>
