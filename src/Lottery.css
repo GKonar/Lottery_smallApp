@@ -3,6 +3,7 @@
   padding: .5rem;
   border: 2px solid #e55039;
   border-radius: 10px;
+  min-width: 600px;
 }
 
 .Lottery-box {
@@ -18,4 +19,7 @@
   border: none;
   background-color: #4a69bd;
   color: #fff;
+  font-size: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

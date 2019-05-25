@@ -32,6 +32,10 @@ class Lottery extends Component {
 			this.generateNumbers();
 		}
 	}
+	// second solution with repetitive numbers
+	// this.setState(curState => ({
+	// 	numbers: curState.numbers.map(n => Math.floor(Math.random() * this.props.maxNum) + 1)
+	// }));
 
 	handleClick() {
 		this.generateNumbers();
@@ -40,7 +44,7 @@ class Lottery extends Component {
 	render() {
 		return (
 			<div className="Lottery">
-				<h2>{this.props.title}</h2>
+				<h1>{this.props.title}</h1>
 				<div className="Lottery-box">
 					{this.state.numbers.map(number => (
 						<LottoBall num={number} />
