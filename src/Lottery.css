@@ -1,9 +1,15 @@
 .Lottery {
   margin: 1rem;
   padding: .5rem;
-  border: 2px solid #e55039;
+  border: 1px solid #2c3e50;
   border-radius: 10px;
   min-width: 600px;
+  background-color: lightgray;
+}
+
+.Lottery h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
 }
 
 .Lottery-box {
